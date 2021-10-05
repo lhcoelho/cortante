@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Dimensionamento à força cortante</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+
+  <head>
+    <h1>
+      Dimensionamento à força cortante &nbsp &nbsp &nbsp
+    </h1>
+    <div>
+      <h5> <a href="mailto:luizhcoelho@gmail.com?subject=Assunto&body=Digite sua mensagem">
+          Luiz Herkenhoff Coelho</a> </h5>
+    </div>
+  </head>
+
+  <main>
+    <h2> Materiais </h2>
+    <a> Concreto: </a>
+
+    <select id="concreto">
+      <option value="20">C20</option>
+      <option value="25">C25</option>
+      <option selected="selected" value="30">C30</option>
+      <option value="35">C35</option>
+      <option value="40">C40</option>
+      <option value="45">C45</option>
+      <option value="50">C50</option>
+      <option value="55">C55</option>
+      <option value="60">C60</option>
+      <option value="70">C70</option>
+      <option value="80">C80</option>
+      <option value="90">C90</option>
+
+    </select>
+    <br> <br>
+    <a>Aço: &nbsp &nbsp &nbsp &nbsp</a>
+    <select id="aco">
+      <option selected="selected" value="500">CA-50</option>
+      <!--         <option value="600">CA-60</option> -->
+
+    </select>
+
+    </form>
+    <h2>Dados geométricos</h2>
+    <div class="secaoTransversal">
+      <img src="https://i.imgur.com/2kUJg7X.jpg" />
+
+      <div class="dados">
+        b [cm]:
+        <input type="number" id="b" placeholder="b [cm]" </input> </br>
+        d [cm]:
+        <input type="number" id="d" placeholder="d [cm]" </input> </br>
+        </br></br><b>"geometria interna"</b></br>
+        &alpha; [<sup>o</sup>]: &nbsp &nbsp
+        <input type="number" id="alpha" value=90 </input> inclinação do estribo [45<sup>o</sup>, 90<sup>o</sup>]</br>
+        &theta;[<sup>o</sup>]: &nbsp &nbsp &nbsp
+        <input type="number" id="theta" value=45 </input> inclinaçao da biela de concreto [30<sup>o</sup>, 45<sup>o</sup>] </br>
+      </div>
+    </div>
+
+    <h2>Solicitações</h2>
+    Vk [kN]:
+    <input type="number" id="vk" placeholder="Vk [kN]" </input> </br>
+    <p> </p>
+    <button type="submit" onclick="dimensionarModelo1()">Calcular (modelo I)</button> &nbsp &nbsp &nbsp
+    <button type="submit" onclick="dimensionarModelo2()">Calcular (modelo II)</button>
+    <div id="resultadoCortante"></div>
+  </main>
+
+  <!--   </head>
+ -->
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
